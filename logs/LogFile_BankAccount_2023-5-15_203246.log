@@ -1,0 +1,20 @@
+kvì 15, 2023 8:32:51 ODP. Account NewAccount
+INFO: New Account is :   Account: jaja, Amount: 0.0 EUR
+kvì 15, 2023 8:33:08 ODP. Account NewAccount
+INFO: New Account is :   Account: klkl, Amount: 0.0 USD
+kvì 15, 2023 8:33:17 ODP. Account AcceptMoney
+INFO: Accept money:    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:33:42 ODP. Account SendMoney
+INFO: Send money:    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:33:42 ODP. Account AcceptMoney
+INFO: Accept money:    Account: klkl, Amount: 0.22522522522522523 USD
+kvì 15, 2023 8:33:53 ODP. Account SendMoney
+INFO: Send money:    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:34:09 ODP. Account SendMoney
+INFO: Send money:    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:34:16 ODP. Account SendMoney
+INFO: Send money:    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:34:37 ODP. Account accountDeletion
+SEVERE: Cannot be deleted!    Account: jaja, Amount: 88.8 EUR
+kvì 15, 2023 8:34:55 ODP. Account SendMoney
+INFO: Send money:    Account: jaja, Amount: 88.8 EUR
