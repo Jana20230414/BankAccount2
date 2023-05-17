@@ -11,37 +11,19 @@ public class InputCycle {
                 OutputPrinter.printReturn(Menu.getMainMenuText());
                 int actionInput = inputReader.readInteger();     
                 
-                // while (actionInput == 0) {
-                //     actionInput = inputReader.readInteger();   
-                // }
-                // if (actionInput == 7){
-                //     AccountHandler.AccountHandlerStatement();
-                //     break;
-                // }
-
-                actionInput = inputReader.readInteger();     
+                while (actionInput == 0) {
+                    actionInput = inputReader.readInteger();   
+                }
+         
                 MenuActions nameOfActions = MenuActions.findNameByValue(actionInput);
                 if (nameOfActions.END_PROGRAM == nameOfActions){
                     AccountHandler.AccountHandlerStatement();
                     break;
                 }
-                
+
                 OutputPrinter.printReturn(Menu.getEnterAccountName());
                 String accountName = inputReader.readString();
-
-                boolean accountExists = bankAccounts.containsKey(accountName);
-                boolean requireExistingAccount = actionInput != 1;
-
-                if(requireExistingAccount && !accountExists)
-                {
-                    OutputPrinter.printReturn(Menu.accountNotExists());
-                    continue;
-                }
-                else if(!requireExistingAccount && accountExists)
-                {
-                    OutputPrinter.printReturn(Menu.accountExists());
-                    continue;
-                }
+                AccountExistence.AccountExistenceCheck(actionInput, accountName, bankAccounts);
                 
                 switch (nameOfActions) {
                     case CREATE_ACCOUNT:                   
@@ -70,6 +52,8 @@ public class InputCycle {
                         break;
                     case END_PROGRAM:      
                         AccountHandler.AccountHandlerStatement();
+                        break;
+                    case Invalid:
                         break;
 
                 }

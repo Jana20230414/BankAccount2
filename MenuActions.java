@@ -18,11 +18,9 @@ public enum MenuActions {
 
     public static MenuActions findNameByValue(Integer actionInput) {
         MenuActions result = Invalid;
-        String actionNameString = "";
-
         for (MenuActions checkAction : values()) {
-            if (checkAction.name().equals(actionInput)) {
-                actionNameString = checkAction.name();
+            if (checkAction.enumValue == actionInput) {
+                result = checkAction;
                 break;
             }
         }
