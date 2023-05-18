@@ -23,7 +23,8 @@ public class InputCycle {
 
                 OutputPrinter.printReturn(Menu.getEnterAccountName());
                 String accountName = inputReader.readString();
-                AccountExistence.AccountExistenceCheck(actionInput, accountName, bankAccounts);
+                if(!AccountExistence.AccountExistenceCheck(actionInput, accountName, bankAccounts))
+                    continue;
                 
                 switch (nameOfActions) {
                     case CREATE_ACCOUNT:                   
@@ -52,8 +53,6 @@ public class InputCycle {
                         break;
                     case END_PROGRAM:      
                         AccountHandler.AccountHandlerStatement();
-                        break;
-                    case Invalid:
                         break;
 
                 }
